@@ -10,19 +10,6 @@ $("form").submit((event)=>{
     }
 });
 
-// var pre_filled_grid = [
-//     [0, 2, 0, 0, 0, 4, 3, 0, 0],
-//     [9, 6, 0, 0, 2, 0, 0, 0, 8],
-//     [0, 0, 0, 6, 0, 9, 0, 5, 0],
-//     [5, 0, 3, 0, 0, 0, 0, 0, 1],
-//     [0, 0, 0, 5, 0, 3, 6, 8, 0],
-//     [0, 0, 8, 0, 7, 0, 0, 0, 0],
-//     [0, 8, 0, 2, 0, 5, 0, 0, 0],
-//     [1, 6, 0, 0, 9, 0, 8, 0, 3],
-//     [0, 0, 9, 8, 0, 0, 0, 6, 0]
-// ];
-
-
 filledGrid = ()=>{     
     var user_input =[];
     for(let i=0; i<81; i++){
@@ -46,15 +33,20 @@ filledGrid = ()=>{
 isSolved = (sudokuGrid) => {
     checkRows(sudokuGrid);
     if(checkRows(sudokuGrid)){
-        rowNotRepeat(sudokuGrid);
-        //console.log(rowNotRepeat(sudokuGrid));
+       var rnr = rowNotRepeat(sudokuGrid);
+        //console.log(rnr);
     }
     
-    columnNotRepeat(sudokuGrid);
-    //console.log(columnNotRepeat(sudokuGrid));
+   var cnr = columnNotRepeat(sudokuGrid);
+    //console.log(cnr);
 
-    squareNotRepeat(sudokuGrid);
-    //console.log(squareNotRepeat(sudokuGrid));
+   var snr = squareNotRepeat(sudokuGrid);
+    //console.log(snr);
+
+    if(rnr && cnr && snr){
+        return true;
+    } else return false;
+
 }
 
 checkRows = (sudokuGrid) =>{
@@ -84,7 +76,7 @@ rowNotRepeat = (sudokuGrid) => {
 
 columnNotRepeat = (sudokuGrid) => {
 
-    //doesn't return 'true' just gives an error Cannot read property '0' of undefined at ColumnNotRepeat
+    //doesn't return 'true' just gives an error "Cannot read property '0' of undefined at ColumnNotRepeat"
     // var count = 1;
     // while(count<=9){
     //     for(let j=0; j<9; j++){
