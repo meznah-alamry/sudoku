@@ -50,9 +50,11 @@ isSolved = (sudokuGrid) => {
         //console.log(rowNotRepeat(sudokuGrid));
     }
     
-    ColumnNotRepeat(sudokuGrid);
-    console.log(ColumnNotRepeat(sudokuGrid));
-    // checkSquare()
+    columnNotRepeat(sudokuGrid);
+    //console.log(columnNotRepeat(sudokuGrid));
+
+    squareNotRepeat(sudokuGrid);
+    //console.log(squareNotRepeat(sudokuGrid));
 }
 
 checkRows = (sudokuGrid) =>{
@@ -80,7 +82,7 @@ rowNotRepeat = (sudokuGrid) => {
     } return true;
 }
 
-ColumnNotRepeat = (sudokuGrid) => {
+columnNotRepeat = (sudokuGrid) => {
 
     //doesn't return 'true' just gives an error Cannot read property '0' of undefined at ColumnNotRepeat
     // var count = 1;
@@ -113,5 +115,19 @@ ColumnNotRepeat = (sudokuGrid) => {
             } else count++;
         }
     } return true;
+}
 
+squareNotRepeat = (sudokuGrid) => {
+    for(let threeRows=0; threeRows<9; threeRows+=3){
+        for(let threeCols=0; threeCols<9; threeCols+=3){
+            var rangeNumber = ['1','2','3','4','5','6','7','8','9'];
+            for(let i=threeRows; i<threeRows+3; i++){
+                for(let j=threeCols; j<threeCols+3; j++){
+                    if(jQuery.inArray(sudokuGrid[i][j], rangeNumber)<=-1){
+                        return false;
+                    }
+                }
+            }
+        }
+    } return true;
 }
