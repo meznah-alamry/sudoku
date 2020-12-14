@@ -47,10 +47,11 @@ isSolved = (sudokuGrid) => {
     checkRows(sudokuGrid);
     if(checkRows(sudokuGrid)){
         rowNotRepeat(sudokuGrid);
-        console.log(rowNotRepeat(sudokuGrid));
+        //console.log(rowNotRepeat(sudokuGrid));
     }
     
-    // checkColumns()
+    ColumnNotRepeat(sudokuGrid);
+    console.log(ColumnNotRepeat(sudokuGrid));
     // checkSquare()
 }
 
@@ -77,4 +78,40 @@ rowNotRepeat = (sudokuGrid) => {
             }
         }
     } return true;
+}
+
+ColumnNotRepeat = (sudokuGrid) => {
+
+    //doesn't return 'true' just gives an error Cannot read property '0' of undefined at ColumnNotRepeat
+    // var count = 1;
+    // while(count<=9){
+    //     for(let j=0; j<9; j++){
+    //         count =1;
+    //         for(let i=0; i<9; i++){
+    //             if(sudokuGrid[i][j] === sudokuGrid[count][j]){
+    //                 return false;
+    //             } else count++;
+    //         }
+    //     } 
+    // }return true;
+
+
+    //store one column in a row then can check every column as a rwo
+    var oneCulmn = [[], [], [], [], [], [], [], [], []];
+    for(let count=0; count<9; count++){
+        for(let i=0; i<9; i++){
+            oneCulmn[count][i] = sudokuGrid[i][count]
+        }
+    }
+    //console.log(oneCulmn);
+
+    for(row in oneCulmn){
+        var count = 1;
+        for(index in oneCulmn[row]){
+            if(oneCulmn[row][index] == oneCulmn[row][count]){
+                return false;
+            } else count++;
+        }
+    } return true;
+
 }
