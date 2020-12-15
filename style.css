@@ -108,10 +108,14 @@ body{
     font-weight: bold;
     padding: 5px 10px;
 }
-#check_btn{
-    display: grid;
-    justify-items: center;
-    margin: 30px auto;
+
+.submit_reset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#check_btn, #reset_btn, #hint_btn{
     font-weight: bold;
     font-size: 20px;
     color: rgb(24, 23, 23);
@@ -119,4 +123,5 @@ body{
     border-radius: 15px;
     border: rgb(5, 5, 5) solid;
     padding: 10px 23px;
+    margin: 20px;
 }

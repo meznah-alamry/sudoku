@@ -1,3 +1,16 @@
+const validSudoku = [
+    [8, 2, 7, 1, 5, 4, 3, 9, 6],
+    [9, 6, 5, 3, 2, 7, 1, 4, 8],
+    [3, 4, 1, 6, 8, 9, 7, 5, 2],
+    [5, 9, 3, 4, 6, 8, 2, 7, 1],
+    [4, 7, 2, 5, 1, 3, 6, 8, 9],
+    [6, 1, 8, 9, 7, 2, 4, 3, 5],
+    [7, 8, 6, 2, 3, 5, 9, 1, 4],
+    [1, 5, 4, 7, 9, 6, 8, 2, 3],
+    [2, 3, 9, 8, 4, 1, 5, 6, 7],
+];
+
+
 $('#easy-level').click(function (e) { 
     e.preventDefault();
     window.location.href='./level1.html';
@@ -18,6 +31,41 @@ $('#home').click(function (e) {
     window.location.href='./index.html';
 });
 
+$('#hint_btn').click(function (e) { 
+    e.preventDefault();
+    var currGrid = filledGrid();
+    //console.log(currGrid);
+    var randomCell = Math.floor(Math.random()*9);
+    //console.log(randomRow);
+    var emptyRow = [];
+    var emptyCol = [];
+    for(key in currGrid){
+        for(index in currGrid[key]){
+            if(currGrid[key][index] === ""){
+                emptyRow += key;
+                emptyCol += index;
+            }
+        }
+    }
+    var randomRow = emptyRow[randomCell];
+    var randomCol = emptyCol[randomCell];
+    var validNumber = validSudoku[randomRow][randomCol];
+    console.log(`${randomRow}${randomCol}${validNumber}`);
+
+    var temp = document.querySelectorAll('input');
+    console.log(temp);
+    var x=0;
+    var y=0;
+    for(let i=0; i<81; i++){ 
+        for(let j=0; j<9; j++){
+            temp[i].id = `${x}-${y}`;
+            if (y==9) {y=0;
+            x++;}
+        } y++; 
+    }
+    
+    document.getElementById(randomRow+'-'+randomCol).value = validNumber;
+});
 
 $("form").submit((event)=>{
     event.preventDefault();
