@@ -1,3 +1,24 @@
+$('#easy-level').click(function (e) { 
+    e.preventDefault();
+    window.location.href='./level1.html';
+});
+
+$('#med-level').click(function (e) { 
+    e.preventDefault();
+    window.location.href='./level2.html';
+});
+
+$('#hard-level').click(function (e) { 
+    e.preventDefault();
+    window.location.href='./level3.html';
+});
+
+$('#home').click(function (e) { 
+    e.preventDefault();
+    window.location.href='./index.html';
+});
+
+
 $("form").submit((event)=>{
     event.preventDefault();
     var sudokuGrid = filledGrid();

@@ -8,9 +8,58 @@ body{
 }
 
 #title{
-    color: rgb(182, 36, 11);
+    color: rgb(236, 22, 147);
     text-align: center;
     font-size: 52px;
+    background-color: rgba(253, 253, 251, 0.733);
+    width: 50%;
+    margin: 50px auto;
+    border-radius: 10px;
+}
+
+#level-head{
+    color: rgb(236, 22, 147);
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(253, 253, 251, 0.733);
+    width: 25%;
+    margin: 30px auto;
+    border-radius: 10px;
+}
+.home-content{
+    display: grid;
+    width: 50%;
+    background-color: rgba(255, 253, 253, 0.644);
+    border:rgb(78, 76, 76) solid 2px;
+    border-radius: 15px;
+    margin: auto;
+}
+
+.home-container{
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+}
+
+.headlines{
+    color: rgb(39, 10, 167);
+}
+
+#rules{
+    font-size: 22px;
+    font-family: sans-serif;
+    line-height: 35px;
+    padding: 0 30px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.home-btns button{
+    width: 100px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 13px;
+    font-size: 18px;
 }
 
 .container{
@@ -49,6 +98,16 @@ body{
     border-right: black solid thick;
 }
 
+#home{
+    border-style: none;
+    margin: 30px auto;
+    display: grid;
+    justify-items: center;
+    font-size: 22px;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 5px 10px;
+}
 #check_btn{
     display: grid;
     justify-items: center;

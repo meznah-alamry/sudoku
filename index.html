@@ -8,101 +8,20 @@
 </head>
 <body>
     <h1 id="title">Sudoku</h1>
-<form>
-    <div class="container">
-        <input type="number" value="" class="border-top border-left" min="1" max="9">
-        <input type="text" value="2" class="border-top border-all" disabled>
-        <input type="number" value="" class="border-top border-right" min="1" max="9">
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="text" value="4" class="border-top border-all" disabled>
-        <input type="text" value="3" class="border-top border-left border-all" disabled>
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="number" value="" class="border-top border-right" min="1" max="9">
+    
+    <div class="home-content">
+        <div class="home-container">
+        <h2 class="headlines">Rules and Terms</h2>
+        <p id="rules">A Sudoku puzzle consists of 81 cells which are divided into nine columns, rows and regions. The task is now to place the numbers from 1 to 9 into the empty cells in such a way that in every row, column and 3×3 region each number appears only once.</p>
 
-        <input type="text" value="9" class="border-left border-all" disabled>
-        <input type="text" value="6" class="border-all" disabled>
-        <input type="number" value="" class="border-right" min="1" max="9">
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="2" class="border-all" disabled>
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="number" value="" class="border-left" min="1" max="9">
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="8" class="border-right border-all" disabled>
-
-        <input type="number" value="" class="border-left" min="1" max="9">
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="number" value="" class="border-right" min="1" max="9">
-        <input type="text" value="6" class="border-all" disabled>
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="9" class="border-all" disabled>
-        <input type="number" value="" class="border-left" min="1" max="9">
-        <input type="text" value="5" class="border-all" disabled>
-        <input type="number" value="" class="border-right" min="1" max="9">
-
-        <input type="text" value="5" class="border-top border-left border-all" disabled>
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="text" value="3" class="border-top border-right border-all" disabled>
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="number" value="" class="border-top border-left" min="1" max="9">
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="text" value="1" class="border-top border-right border-all" disabled>
-
-        <input type="number" value="" class="border-left" min="1" max="9">
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="number" value="" class="border-right" min="1" max="9">
-        <input type="text" value="5" class="border-all" disabled>
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="3" class="border-all" disabled>
-        <input type="text" value="6" class="border-left border-all" disabled>
-        <input type="text" value="8" class="border-all" disabled>
-        <input type="number" value="" class="border-right" min="1" max="9">
-
-        <input type="number" value="" class="border-left" min="1" max="9">
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="8" class="border-right border-all" disabled>
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="7" class="border-all" disabled>
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="number" value="" class="border-left" min="1" max="9">
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="number" value="" class="border-right" min="1" max="9">
-
-        <input type="number" value="" class="border-top border-left" min="1" max="9">
-        <input type="text" value="8" class="border-top border-all" disabled>
-        <input type="number" value="" class="border-top border-right" min="1" max="9">
-        <input type="text" value="2" class="border-top border-all" disabled>
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="text" value="5" class="border-top border-all" disabled>
-        <input type="number" value="" class="border-top border-left" min="1" max="9">
-        <input type="number" value="" class="border-top" min="1" max="9">
-        <input type="number" value="" class="border-top border-right" min="1" max="9">
-
-        <input type="text" value="1" class="border-left border-all" disabled>
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="number" value="" class="border-right" min="1" max="9">
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="9" class="border-all" disabled>
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="8" class="border-left border-all" disabled>
-        <input type="number" value="" class="border-all" min="1" max="9">
-        <input type="text" value="3" class="border-right border-all" disabled>
-
-        <input type="number" value="" class="border-bottom border-left" min="1" max="9">
-        <input type="number" value="" class="border-bottom" min="1" max="9">
-        <input type="text" value="9" class="border-bottom border-right border-all" disabled>
-        <input type="text" value="8" class="border-bottom border-all" disabled>
-        <input type="number" value="" class="border-bottom" min="1" max="9">
-        <input type="number" value="" class="border-bottom" min="1" max="9">
-        <input type="number" value="" class="border-bottom border-left" min="1" max="9">
-        <input type="text" value="6" class="border-bottom border-all" disabled>
-        <input type="number" value="" class="border-bottom border-right" min="1" max="9">
-    </div>
-
-    <button type="submit" value="submit" id="check_btn">Check</button>
-</form>
+        <h2 class="headlines">Choose difficulty level</h2>
+        <div class="home-btns">
+            <button id="easy-level">Easy</button> <br>
+            <button id="med-level">Medium</button> <br>
+            <button id="hard-level">Hard</button>
+        </div>
+        </div>
+    </div>   
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="./script.js"></script>
