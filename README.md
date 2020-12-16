@@ -29,6 +29,10 @@ HTML pages:
 
 Images folder contains background picture and some screenshots
 
+## Approach
+First, building HTML then CSS after that start writing functions in javaScript, I start with a function that take numbers from board and store them in 2D array (9*9) after that build a function to check the 2D array just contains numbers 1-9.
+And as I mentioned before ckeck every row, colum and sub-square to make sure no repeated numbers, all these functions are boolean and if all are true the puzzel is solved.
+
 ## Getting Started
 After choosing a level you will see a board with empty cells and some of them have numbers, as shown in below screen shot
 
@@ -36,4 +40,9 @@ After choosing a level you will see a board with empty cells and some of them ha
 
 You have to fill all empty cells following previous rules if you feel need help you can click 'Hint' button but there are only five hints. 
 If you want to calculate the time spent solving the puzzel just click the 'start' button on the timer side.
+
 After filling all cells just click 'Check' button and then will receive a message whether the solution right or not.
+
+### Demo
+
+[Demo](https://pages.git.generalassemb.ly/meznah/project-1/index.html)
