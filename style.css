@@ -1,5 +1,4 @@
 body{
-    /* background-color: rgb(154, 163, 158); */
     background-image: url(./images/background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -12,7 +11,7 @@ body{
     text-align: center;
     font-size: 52px;
     background-color: rgba(253, 253, 251, 0.733);
-    width: 50%;
+    width: 70%;
     margin: 50px auto;
     border-radius: 10px;
 }
@@ -29,11 +28,12 @@ body{
 
 .home-content{
     display: grid;
-    width: 50%;
+    width: 70%;
     background-color: rgba(255, 253, 253, 0.644);
     border:rgb(78, 76, 76) solid 2px;
     border-radius: 15px;
     margin: auto;
+    margin-bottom: 30px;
 }
 
 .home-container{
@@ -44,23 +44,34 @@ body{
 
 .headlines{
     color: rgb(39, 10, 167);
+    font-size: 28px;
 }
 
-#rules{
+#rules, .options {
     font-size: 22px;
     font-family: sans-serif;
-    line-height: 35px;
+    line-height: 32px;
     padding: 0 30px;
     text-align: justify;
     text-justify: inter-word;
 }
 
+.home-btns{
+    display:grid;
+    grid-template-columns: repeat(3, 130px);
+    justify-content: center;
+    align-items: center;
+}
+
 .home-btns button{
-    width: 100px;
+    /* width: 100px; */
     padding: 5px;
-    /* margin-bottom: 10px; */
+    margin: 0px 10px 10px 10px;
     border-radius: 13px;
     font-size: 18px;
+    background-color: rgba(10, 10, 10, 0.829);
+    font-weight: bold;
+    color: rgb(236, 233, 233);
 }
 
 .whole-page{
@@ -76,7 +87,6 @@ body{
     grid-template-rows: repeat(9, 45px);
     justify-content: center;
     align-content: center;
-    /* margin-top: 0%; */
 }
 
 .container input{
@@ -136,35 +146,27 @@ body{
     margin: 20px 12px;
 }
 
-/* .timer{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10%;
-    margin-top: 10%;
-} */
-
-
-
 aside {
-    /* width: 50%; */
-    padding-right: 15px;
     margin-right: 200px;
-    margin-top: 30px;
-    /* display: grid; */
-    /* font-style: italic;
-    background-color: lightgray; */
   }
 
-.timer h3{
+aside h3{
     font-size: 24px;
-    /* margin-bottom: 0%; */
+    margin-bottom: 5px;
+}
+
+#hours, #minutes, #seconds{
+    color: rgb(224, 38, 38);
+    font-weight: bold;
 }
 
 .start-pause-btns{
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 
-#start{
+#start, #pause{
     margin-right: 10px;
+    font-weight: bold;
 }

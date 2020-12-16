@@ -9,7 +9,8 @@
 <body>
     <h2 id="level-head">Hard level</h2>
     <button id="home">Home</button>
-<form>
+    <div class="whole-page">
+    <form>
     <div class="container">
         <input type="number" value="" class="border-top border-left" min="1" max="9">
         <input type="number" value="2" class="border-top border-all" disabled>
@@ -107,7 +108,18 @@
         <button type="button" id="hint_btn">Hint</button>
         <button type="reset" id="reset_btn">Restart</button>
         </div>
-</form>
+        </form>
+    <aside>
+        <h3>Timer</h3> 
+        <span id="hours">00</span><b>:</b>
+        <span id="minutes">00</span><b>:</b>
+        <span id="seconds">00</span>
+        <div class="start-pause-btns">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        </div>
+    </aside>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="./script.js"></script>

@@ -200,17 +200,18 @@ squareNotRepeat = (sudokuGrid) => {
     } return true;
 }
 
-
 window.onload = ()=> {
     let hr = $('#hours');
     let min = $('#minutes');
     let sec = $('#seconds');
     let counter = 0;
     $('#start').on('click', start);
-    $('#pause').on('click', function () {
+    $('#pause').on('click', function (e) {
+        e.preventDefault();
         clearInterval(counter);
         $('#start').on('click', start);
     });
+
     function start() {
         counter = setInterval(step, 1000);
         $('#start').off('click');
