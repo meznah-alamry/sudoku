@@ -53,7 +53,6 @@ $('#hint_btn').click(function (e) {
     console.log(`${randomRow}${randomCol}${validNumber}`);
 
     var temp = document.querySelectorAll('input');
-    console.log(temp);
     var x=0;
     var y=0;
     for(let i=0; i<81; i++){ 
@@ -63,8 +62,10 @@ $('#hint_btn').click(function (e) {
             x++;}
         } y++; 
     }
-    
-    document.getElementById(randomRow+'-'+randomCol).value = validNumber;
+
+    var targetInput = document.getElementById(randomRow+'-'+randomCol);
+    targetInput.style.color='#c12020';
+    targetInput.value = validNumber;
 });
 
 $("form").submit((event)=>{
