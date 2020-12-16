@@ -31,12 +31,18 @@ $('#home').click(function (e) {
     window.location.href='./index.html';
 });
 
-$('#hint_btn').click(function (e) { 
-    e.preventDefault();
+var counter=5;
+$('#hint_btn').click(function () { 
+    // e.preventDefault();
+    counter--;
+    if (counter <= 0){
+        alert('You have not hint left');
+        $('#hint_btn').prop('disabled', true);
+    } else alert('You have ' + counter + ' hint left');
     var currGrid = filledGrid();
     //console.log(currGrid);
     var randomCell = Math.floor(Math.random()*9);
-    //console.log(randomRow);
+    console.log(randomCell);
     var emptyRow = [];
     var emptyCol = [];
     for(key in currGrid){
@@ -50,7 +56,7 @@ $('#hint_btn').click(function (e) {
     var randomRow = emptyRow[randomCell];
     var randomCol = emptyCol[randomCell];
     var validNumber = validSudoku[randomRow][randomCol];
-    console.log(`${randomRow}${randomCol}${validNumber}`);
+    console.log(randomRow + ' ' + randomCol);
 
     var temp = document.querySelectorAll('input');
     var x=0;
