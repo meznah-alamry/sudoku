@@ -23,9 +23,10 @@ body{
     font-size: 30px;
     background-color: rgba(253, 253, 251, 0.733);
     width: 25%;
-    margin: 30px auto;
+    margin: 20px auto 30px auto;
     border-radius: 10px;
 }
+
 .home-content{
     display: grid;
     width: 50%;
@@ -57,9 +58,15 @@ body{
 .home-btns button{
     width: 100px;
     padding: 5px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     border-radius: 13px;
     font-size: 18px;
+}
+
+.whole-page{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    
 }
 
 .container{
@@ -69,6 +76,7 @@ body{
     grid-template-rows: repeat(9, 45px);
     justify-content: center;
     align-content: center;
+    /* margin-top: 0%; */
 }
 
 .container input{
@@ -110,7 +118,9 @@ body{
 }
 
 .submit_reset{
-    display: flex;
+    width: 100vw;
+    display:grid;
+    grid-template-columns: repeat(3, 143px);
     justify-content: center;
     align-items: center;
 }
@@ -122,6 +132,39 @@ body{
     background-color: rgb(158, 153, 153);
     border-radius: 15px;
     border: rgb(5, 5, 5) solid;
-    padding: 10px 23px;
-    margin: 20px;
+    padding: 10px 0;
+    margin: 20px 12px;
+}
+
+/* .timer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+    margin-top: 10%;
+} */
+
+
+
+aside {
+    /* width: 50%; */
+    padding-right: 15px;
+    margin-right: 200px;
+    margin-top: 30px;
+    /* display: grid; */
+    /* font-style: italic;
+    background-color: lightgray; */
+  }
+
+.timer h3{
+    font-size: 24px;
+    /* margin-bottom: 0%; */
+}
+
+.start-pause-btns{
+    display: flex;
+    flex-direction: row;
+}
+
+#start{
+    margin-right: 10px;
 }
