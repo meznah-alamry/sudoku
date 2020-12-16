@@ -19,11 +19,14 @@ A sudoku is a 9*9 grid, it solved when all grid cells have been filled with numb
 
 ## Technologies used and structure
 HTML, CSS, JavaScript and jQuery using Visual Studio Code.
+
 HTML pages: 
 - landing page (index.html) contains information and rules of the game and three options to start and play 
 - (level1.html, level2.html, level3.html) difficulty pages: easy, medium and hard
-CSS file (style.css) control the style of the HTML pages
+- CSS file (style.css) control the style of the HTML pages
+
 (script.js) contains JavaScript and jQuery functions that run website
+
 Images folder contains background picture and some screenshots
 
 ## Getting Started
@@ -33,3 +36,4 @@ After choosing a level you will see a board with empty cells and some of them ha
 
 You have to fill all empty cells following previous rules if you feel need help you can click 'Hint' button but there are only five hints. 
 If you want to calculate the time spent solving the puzzel just click the 'start' button on the timer side.
+After filling all cells just click 'Check' button and then will receive a message whether the solution right or not.
